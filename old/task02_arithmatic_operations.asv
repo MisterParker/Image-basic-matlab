@@ -1,0 +1,21 @@
+% 16BCE2147
+% Akshay Gugale
+% CSE4019 Image Processing
+% TASK 1 - Reading Greyscale, Color and Binary images in the form of a
+% Matrix
+
+clc
+clear all
+close all
+
+i1 = imread('E:\matlab summer\Databaseimages\Albert.tif');
+i2 = imread('E:\matlab summer\Databaseimages\flipped_albert.tif');
+%imshow('D:\Sumit_matlab\Databaseimages\image1.tif');
+ia = imadd(i1,i2);
+is = imsubtract(i1,i2);
+
+subplot(2,2,1),imshow(i1),title('albert img');
+subplot(2,2,2),imshow(i2),title('flipped_albert img');
+
+subplot(2,2,3),imshow(ia),title('added img');
+subplot(2,2,4),imshow(is),title('subtracted img');
